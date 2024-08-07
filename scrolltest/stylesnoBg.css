@@ -1,0 +1,22 @@
+/* Ensure the body has no extra margins or paddings */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #b7b7b7; /* Optional: Background color to see the transparency */
+}
+
+.image-container {
+  /* Container styling (optional) */
+  text-align: center; /* Center the image */
+}
+
+.transparent-image {
+  max-width: 50%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+
+}

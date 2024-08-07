@@ -1,0 +1,89 @@
+body, ul, li, a{
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.headerCss{
+  padding: 20px;
+  border: none;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li{
+  margin-left: 5px;
+
+}
+
+.proDivCss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItemsCss{
+  margin-left: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpimgCss{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dpnameCss{
+  margin-top: 3px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+
+.slashCss{
+  font-size: 28px;
+}
+
+.workAtag, .abtmeAtag {
+  color: black;
+  display: flex;
+  align-items: center; 
+}
+
+.workAtag{
+  font-size: 20px;
+}
+
+.abtmeAtag{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  text-align: left;
+  padding: 2px 0px 2px 20px;
+  background: #000000;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
