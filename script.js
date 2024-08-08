@@ -110,3 +110,46 @@ document.querySelectorAll('.image-container').forEach(container => {
   });
 });
 
+window.addEventListener('load', function() {
+  const images = document.querySelectorAll('.secDesCss');
+  
+  images.forEach(image => {
+    const rect = image.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      image.classList.add('show');
+    }else{
+      image.classList.remove('show');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slideInSection = document.querySelector('.cfhddiv');
+  
+  window.addEventListener('scroll', function () {
+    const sectionTop = slideInSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight / 1.3;
+    
+    if (sectionTop < triggerPoint) {
+      slideInSection.classList.add('slide-up');
+    }else{
+      slideInSection.classList.remove('slide-up');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slideInSection = document.querySelector('.listCss');
+  
+  window.addEventListener('scroll', function () {
+    const sectionTop = slideInSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight / 0.9;
+    
+    if (sectionTop < triggerPoint) {
+      slideInSection.classList.add('slide-up');
+    }else{
+      slideInSection.classList.remove('slide-up');
+    }
+  });
+});
+

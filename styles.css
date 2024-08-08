@@ -148,7 +148,7 @@ section {
 .marquee-content span {
   margin-top: 30px;
   font-size: 460px; /* Adjust font size as needed */
-  color: #ff4400;
+  color: #ff001e;
 }
 
 @keyframes marquee {
@@ -282,7 +282,7 @@ section {
 }
 
 .desPro2{
-  padding: 40px 30px 30px 5px;
+  padding: 60px 30px 30px 5px;
   border-radius: 20px;
   border: none;
   width: 40%;
@@ -332,8 +332,12 @@ section {
   filter: drop-shadow(10px 20px 20px rgba(83, 83, 83, 0.5));
 }
 
+.tnTle{
+  font-size: 50px;
+}
+
 .desPro3{
-  padding: 100px 30px 30px 5px;
+  padding: 70px 30px 10px 5px;
   border: #6a6a6a 2px solid;
   border-radius: 20px;
   border: none;
