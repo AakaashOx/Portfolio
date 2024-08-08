@@ -91,6 +91,7 @@ section {
   position: relative;
   padding: 20px;
   margin: 20px auto;
+  margin-bottom: 0px;
   min-height: 500px;
   max-width: 100%; 
   background: url('coverimg/cover port 4.png') no-repeat center center/cover;
@@ -119,11 +120,12 @@ section {
   text-align: center;
   font-size: 3em; 
   color: #fff;
-  text-shadow: 
+  font-weight: bolder;
+  /*text-shadow: 
     -1px -1px 0 #eefdff,  
      1px -1px 0 #f2ffff,
     -1px  1px 0 #f1fdff,
-     1px  1px 0 #ebfbff;
+     1px  1px 0 #ebfbff;*/
 }
 
 .marquee-container {
@@ -131,7 +133,7 @@ section {
   overflow: hidden;
   width: 105%;
   height: 80vh;
-  background-color: rgba(24, 26, 28, 0.8);
+  background-color: rgb(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   opacity: 90%;
@@ -145,7 +147,7 @@ section {
 
 .marquee-content span {
   margin-top: 30px;
-  font-size: 450px; /* Adjust font size as needed */
+  font-size: 460px; /* Adjust font size as needed */
   color: #ff4400;
 }
 
@@ -162,14 +164,17 @@ section {
 .worksDiv{
   border: none;
   padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #fff;
   max-width: 98%;
 }
 
+
 /* 1st project*/
 
 .pro1Css{
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: baseline;
   border:none;
@@ -340,7 +345,110 @@ section {
   
 }
 
+/*myArt div*/
 
+.myArtdiv{
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-image: linear-gradient(#14151a,#14181d,#15191e,#13151b);
+  height: 400vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bgArt{
+  position: absolute; 
+  margin-top: 100px;
+  border: none;
+  border-radius: 100%;
+  height: 50vh;
+  width: 30%;
+  background-image: radial-gradient(#10336f,#143169,#143670);
+  box-shadow: 0 0 500px 200px #12346e;
+  z-index: 0;
+}
+
+.artGrid{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image-grid {
+  margin-top: 0%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; 
+  justify-items: center;
+  margin-right: 1%;
+  margin-left: 3%;
+}
+
+.image-container {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  opacity: 0; 
+  transform: translateY(10%); /* Slightly moved down */
+  transition: transform 0.5s ease-out, opacity 1.5s ease-in; /* Smooth appearance */
+}
+
+.image-container.show{
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  perspective: 1000px; /* Provides a 3D perspective */
+}
+
+.image-item1, .image-item2, .image-item3, .image-item4, .image-item5, .image-item6{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d; /* Allows for 3D transformations */
+}
+
+.image-item1, .image-item2, .image-item3, .image-item4, .image-item5, .image-item6{
+  transform-origin: center; /* Center the transform origin */
+}
+
+.skthead{
+  color: white;
+  margin-top: 5%;
+  margin-bottom: 12%;
+  font-size: 45px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.8s ease-out, opacity 0.5s ease-out;
+}
+
+.skthead.slide-up{
+  opacity: 1;
+  transform: translateY(0)
+}
+
+
+.image-grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; 
+  justify-items: center;
+  margin-top: 5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
 
 footer {
   text-align: left;
