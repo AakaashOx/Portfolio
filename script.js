@@ -9,6 +9,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+window.addEventListener('load', function() {
+  const images = document.querySelectorAll('.coverSecss');
+  
+  images.forEach(image => {
+    const rect = image.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      image.classList.add('show');
+    }else{
+      image.classList.remove('show');
+    }
+  });
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const slideInSection = document.querySelector('.imgSlPro1');
@@ -122,6 +135,8 @@ window.addEventListener('load', function() {
     }
   });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const slideInSection = document.querySelector('.cfhddiv');
