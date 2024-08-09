@@ -144,10 +144,10 @@ section {
   overflow: hidden;
   width: 105%;
   height: 80vh;
-  background-color: rgba(5, 13, 35, 0.773);
+  background-color: rgba(5, 13, 35, 0.708);
   display: flex;
   align-items: center;
-  opacity: 90%;
+  opacity: 80%;
 }
 
 .marquee-content {
