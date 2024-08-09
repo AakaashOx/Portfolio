@@ -144,7 +144,7 @@ section {
   overflow: hidden;
   width: 105%;
   height: 80vh;
-  background-color: rgb(1 4 12 / 70%);
+  background-color: rgba(1, 4, 12, 0.7); 
   display: flex;
   align-items: center;
   opacity: 80%;
