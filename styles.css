@@ -94,7 +94,7 @@ header li{
 }
 
 .coverSecss.show{
-  opacity: 1; /* Fade in */
+  opacity: 0.8; /* Fade in */
   transform: translateY(0); /* Move to original position */
 }
 
