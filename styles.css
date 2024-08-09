@@ -7,9 +7,8 @@
 }
 
 @font-face {
-  font-family: 'DigibatsItalic';
+  font-family: 'Digibats';
   src: url('/fonts/DigibatsItalic.otf') format('opentype');
-  font-weight: normal;
 }
 
 html, body {
@@ -146,7 +145,7 @@ section {
   background-color: rgba(4, 6, 12, 0.7) !important;
   display: flex;
   align-items: center;
-  opacity: 80%;
+  opacity: 90%;
 }
 
 .marquee-content {
@@ -284,7 +283,7 @@ section {
 }
 
 .propediaTle{
-  font-family: 'DigibatsItalic', sans-serif;
+  font-family: 'Digibats', sans-serif;
   font-size: 70px;
   background: linear-gradient( #01d282,#00ff9d,#02e0a9, #006333);
     -webkit-background-clip: text;
