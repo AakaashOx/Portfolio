@@ -8,7 +8,7 @@
 /*testing digi font*/
 @font-face {
   font-family: 'Digibats';
-  src: url('/fonts/DigibatsItalic.otf') format('opentype');
+  src: url('fonts/DigibatsItalic.otf') format('opentype');
 }
 
 html, body {
