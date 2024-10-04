@@ -106,7 +106,7 @@ section {
   background: url('../coverimg/coverportfolioimage.png') no-repeat center center/cover;
   opacity: 90%;
   border-radius: 5px;
-  box-shadow: 0px 0px 50px 5px rgba(37, 37, 37, 0.2);
+  box-shadow: 0px 0px 50px 5px rgba(37, 37, 37, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
