@@ -123,6 +123,7 @@ document.querySelectorAll('.image-container').forEach(container => {
   });
 });
 
+
 window.addEventListener('load', function() {
   const images = document.querySelectorAll('.secDesCss');
   
@@ -167,4 +168,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+//Explore button function 
+
+function expbtn1(){
+  
+}
+
+function expbtn2(){
+  
+}
+
+function expbtn3(){
+  
+}
+
 

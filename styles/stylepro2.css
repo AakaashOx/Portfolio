@@ -1,0 +1,593 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset some default styles */
+@font-face {
+  font-family: 'FugazOne';
+  src: url('fonts/FugazOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*testing digi font*/
+@font-face {
+  font-family: 'Digibats';
+  src: url('fonts/DigibatsItalic.otf') format('opentype');
+}
+
+body, ul, li, a{
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to right,#000000,#000000,#000000);
+}
+
+.headerCss {
+  padding: 20px;
+  border: none;
+  background: transparent;
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Stick to the top */
+  left: 0;
+  width: 100%; /* Make the header span the full width */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  margin-right: 5px;
+}
+
+.proDivCss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItemsCss {
+  margin-left: 32.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpimgCss {
+  margin-top: 2px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dpnameCss {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+.slashCss {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.workAtag, .abtmeAtag {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+.workAtag {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.abtmeAtag {
+  font-size: 20px;
+}
+
+
+
+.full-screen-section {
+  height: 100vh;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+
+}
+
+.msgSection{
+  color: #d5dddd;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: transform 0.8s ease-in-out, opacity 0.5s ease-out;
+}
+
+.msgSection.slide-up{
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.top-section {
+  display: flex;
+  padding: 0;
+  
+}
+
+
+@keyframes fluidMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 80% 90%;
+  }
+  100% {
+    background-position: 50% 90%;
+  }
+}
+
+.top-section .pro1cover {
+  position: relative;
+  background: linear-gradient(to right,#000000,#000000,#000000);
+  width: 100vw;
+  padding: 2rem;
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+  z-index: 0; /* Ensure content stays above the background image */
+  transform: scale(calc(1.05 - (var(--4dscroll) / 200))); /* Scale down on scroll */
+  transform-origin: center top; /* Ensure scaling happens from the top center */
+}
+
+/*
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border: 2px solid rgb(11, 12, 12); 
+  overflow: hidden;
+  z-index: -1;  Keep the video behind the content 
+}*/
+
+.top-section .pro1cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  object-fit: cover; /* Ensures the video covers the container */
+  z-index: -1; /* Keep the video behind the content */
+}
+
+.image-container {
+  position: absolute; /* To position images freely within pro1cover */
+  top: 20%;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+  display: grid; /* Using grid to spread images across */
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number based on images */
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px; /* Controls the space between images */
+  z-index: -1;
+}
+
+.hover-image {
+  width: 100px;
+  height: auto;
+  transition: transform 0.2s ease;
+  position: absolute; /* Ensures images move correctly with mouse events */
+}
+
+.img1hov{
+  top: 30%;
+  left: -13%;
+  height: 20%;
+  width: 20%;
+  opacity: 0.7;
+}
+.img2hov{
+  top: -10%;
+  left: -13%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img3hov{
+  top: -16%;
+  left: 47%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img4hov{
+  top: -5%;
+  left: 30%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img5hov{
+  top: 9%;
+  left: -12%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img6hov{
+  top: -3%;
+  left: 2%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img7hov{
+  top: 8%;
+  left: 57%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img8hov{
+  top: 30%;
+  left: 57%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img9hov{
+  top: 13%;
+  left: 43%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+.img10hov{
+  top: 30%;
+  left: 40%;
+  height: 40%;
+  width: 40%;
+  opacity: 0.7;
+}
+.img11hov{
+  top: 40%;
+  left: 1%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+
+.img12hov{
+  top: 40%;
+  left: -15%;
+  height: 30%;
+  width: 30%;
+  opacity: 0.7;
+}
+
+/*
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  Ensures the video covers the container
+  
+   Apply the blur filter 
+  filter: blur(20px);  Adjust the blur value 
+}*/
+
+.top-section .pro1cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background: linear-gradient(120deg,#151515,#0c0c0c,#060606,#151515);
+  background-size: 200% 200%;
+  animation: fluidMove 8s ease infinite;
+  /*opacity: var(--background-opacity);  Control the image opacity */
+  transition: opacity 0.5s ease;
+  z-index: -1; /* Keep the background image behind the content */
+}
+
+
+
+:root {
+  --scroll: 0;
+  --background-opacity: 0;
+}
+
+.top-section {
+  position: sticky;
+  top: 0;
+  width: 99vw;
+  /* (oldVal - oldMin) * newRange / oldRange + newMin */
+  translate: 0 calc(-1% * (max(var(--scroll), 100) - 100) * 100 / 50  );
+  --background-opacity: calc(0% + 1% * min(var(--scroll), 30) * 100 / 30);
+  z-index: 0;
+}
+
+.pro1cover{
+  background-color: rgb(17, 24, 45);
+  padding: 3rem;  
+  position: relative;
+  z-index: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.textforcover{
+  display: flex;
+  justify-content: center;
+}
+
+.probrHead{
+  position: absolute;
+  color: white;
+  font-size: 13rem;
+  top: -10%;
+  line-height: 0.8;
+  text-align: left;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.9));
+}
+
+.tryitHead{
+  color: rgb(26, 27, 28);
+  background: linear-gradient(#00ff91,#00ff99,#00ff91);
+  height: 15%;
+  width: 33%;
+  font-size: 4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 67%;
+  left: 60%;
+  border: none;
+  border-radius: 1.5rem; /* Rounded corners */
+  padding: 10px 20px;
+  box-shadow: 2px 8px #00664f; /* Create shadow under the button */
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.tryitHead:active {
+  transform: translateY(4px); /* Push down when clicked */
+  box-shadow: 0 4px #00664f; /* Shorten the shadow when pressed */
+}
+
+.first-main-section {
+  position: relative;  
+  width: 100vw;
+  height: 50vh; /* Ensure the section takes up the full viewport height */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right,#000000,#000000,#000000); /* Background color for distinction */
+  z-index: 1; /* Keep it below the top section initially */
+}
+
+.hdmsgSection, .first-main-section {
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.hdmsgSection{
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(40%);
+  transition: transform 0.8s ease-in-out, opacity 0.5s ease-out;
+}
+
+.hdmsgSection.slide-up{
+  opacity: 1;
+  transform: translateY(0)
+}
+
+/* Adjust the top section for proper stacking and smooth transition */
+.top-section {
+  position: relative;
+  z-index: 2; /* Ensure it's stacked above */
+}
+
+.exploreuxmsg{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.photosSec{
+  margin-top: 10rem;
+  display: flex;
+  padding: 1rem;
+}
+
+.scroll-indicator{
+  position: fixed;
+  top: 37.5%;
+  width: 7%; 
+  transform: translateY(60%);
+  z-index: 1;
+}
+
+.scroll-bar{
+ width: 100%;
+ overflow: hidden;
+ margin-bottom: 0.8rem;
+}
+
+.imgscr1{
+  width: 100%;
+}
+
+.box-ind{
+  left: -1%;
+  position: relative;
+  height: 5.2rem;
+  width: 8.5rem;
+  border: 1px solid whitesmoke;
+  transform: translateY(0%);
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.grid-container {
+  margin-left: 0rem;
+  width: 58vw;
+  height: 280vh;
+  position: relative;
+  transform: translate(10%, 0%);
+ } 
+
+/* 
+{opacity: 0;
+  transform: translateY(0.4%);
+  transition: transform 0.1s ease-in-out, opacity 0.5s ease-out;
+}
+
+.grid-container.slide-up{
+  opacity: 1;
+  transform: translateY(0%);
+}*/
+
+
+.grid-item {
+  width: 100%;   
+  height: 30rem; /* Set the height for the container */
+  margin-bottom: 2rem;
+  border: 2px solid rgb(58, 59, 63);
+  border-radius: 1rem;
+  overflow: hidden; /* Hide the overflowing part of the image */
+}
+
+.imgtype1 {
+  width: 100%; /* Full width of the container */
+  height: 120%; /* Make the image much taller than the container */
+  object-fit: cover;
+  transform: translateY(0); /* Start at the top */
+  transition: transform 0.2s ease-out; /* Smooth movement */
+}
+
+.imgtype2 {
+  width: 100%; /* Full width of the container */
+  height: 120%; /* Make the image much taller than the container */
+  object-fit: cover;
+  transform: translateY(0); /* Start at the top */
+  transition: transform 0.2s ease-out; /* Smooth movement */
+}
+
+.imgtype3 {
+  width: 100%; /* Full width of the container */
+  height: 120%; /* Make the image much taller than the container */
+  object-fit: cover;
+  transform: translateY(0); /* Start at the top */
+  transition: transform 0.2s ease-out; /* Smooth movement */
+}
+
+.imgtype4 {
+  width: 100%; /* Full width of the container */
+  height: 120%; /* Make the image much taller than the container */
+  object-fit: cover;
+  transform: translateY(0); /* Start at the top */
+  transition: transform 0.2s ease-out; /* Smooth movement */
+}
+
+.imgDescrip{
+  width: 20%;
+  padding-top: 10rem;
+  margin-left: 10%;
+}
+
+.fontimgDesc{
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  text-align: left;
+  padding-right: 2rem;
+  transform: translateY(80%);
+  transition: transform 0.8s ease-in-out, opacity 0.5s ease-out;
+  z-index: 1;
+}
+
+.fontimgDesc.slide-up{
+  opacity: 1;
+  transform: translateY(0)
+}
+
+
+.blackbox{
+  position: relative;
+  top: -1%;
+  height: 18%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.blackbox2{
+  position: relative;
+  top: -1%;
+  height: 18%;
+  background-color: #000000;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+.blackbox3{
+  position: relative;
+  top: -1%;
+  height: 18%;
+  background-color: #000000;
+  z-index: 2;
+  margin-bottom: 3rem;
+}
+
+.blackbox4{
+  position: relative;
+  top: -1%;
+  height: 8%;
+  background-color: #000000;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+
+
+
+
+footer {
+  text-align: left;
+  padding: 0.125rem 0 0.125rem 1.25rem;
+  background: #000000;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+

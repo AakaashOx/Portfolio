@@ -1,0 +1,425 @@
+@keyframes grow {
+  0% {
+    transform: scale(0.5); /* Start very small */
+    opacity: 0; /* Start fully transparent */
+  }
+  100% {
+    transform: scale(1); /* End at full size */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(249, 252, 255);
+  font-family: 'Poppins', sans-serif;
+}
+
+body, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.headerCss {
+  padding: 1.25rem; /* Adjusted for responsiveness */
+  border: none;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+header li {
+  margin-left: 0.5rem; /* Adjusted for responsiveness */
+}
+
+.proDivCss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItemsCss {
+  margin-left: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpimgCss {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.dpnameCss {
+  margin-top: 0.2rem;
+  margin-left: 0.6rem;
+  font-size: 1.25rem;
+  color: black;
+}
+
+.slashCss {
+  font-size: 1.75rem;
+}
+
+.workAtag, .abtmeAtag {
+  color: black;
+  display: flex;
+  align-items: center; 
+}
+
+.workAtag {
+  font-size: 1.25rem;
+}
+
+.abtmeAtag {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+section {
+  padding: 1rem;
+  margin: 1rem auto;
+  height: auto; /* Adjusted for responsive height */
+  max-width: 100%;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1.25rem 0.125rem rgba(89, 89, 89, 0.2);
+  margin-bottom: 3rem;
+}
+
+.secfirst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgdivCss {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.oximgCss {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  margin-right: 2.5rem;
+  animation: grow 0.8s ease-out;
+}
+
+.secDesCss {
+  padding: 0.5rem;
+  width: 100%; /* Adjusted for responsive width */
+  max-width: 30rem;
+  margin-left: 0.5rem;
+  margin-right: 3rem;
+  border: none;
+  opacity: 0;
+  transform: translateX(5%);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-in;
+}
+
+.secDesCss.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nameHead {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.descCss, .cntinfo {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Certificate Section */
+.certdiv {
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  padding: 1rem 1rem 0rem 1rem;
+  overflow: hidden;
+}
+
+.cfhddiv {
+  border: none;
+  border-radius: 4.375rem;
+  width: 60%;
+  font-size: 2.1875rem;
+  margin-left: 20%;
+  padding: 0.125rem;
+  color: #000;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.cfhddiv.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cerSpan {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff001e;
+}
+
+.certifiHd {
+  font-size: 1.375rem;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.listCss {
+  list-style: none;
+  padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+  border: none;
+  border-radius: 3.125rem 3.125rem 0 0;
+  margin-top: 3.125rem;
+  margin-bottom: 0;
+  background-image: linear-gradient(#23323e, #121f2a, #060d16);
+  box-shadow: 0.0625rem 0.25rem 0.75rem 0.0625rem rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(5%);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.listCss.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list-item {
+  position: relative;
+  margin-bottom: 1.25rem;
+  margin-left: 3.125rem;
+  padding: 1.25rem;
+  width: 90%;
+  border-radius: 1.875rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.hover-photo, .hover-photo1 {
+  position: absolute;
+  top: 0.625rem;
+  right: 10%;
+  width: 31.25rem;
+  height: 21.875rem;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.5);
+}
+
+.hover-photo1 {
+  bottom: 0.625rem;
+  width: 34.375rem;
+}
+
+.list-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.25rem 0.625rem 0.0625rem rgba(0,0,0,0.8);
+  border-radius: 1.875rem;
+}
+
+.list-item:hover .hover-photo, 
+.list-item:hover .hover-photo1 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+footer {
+  text-align: left;
+  padding: 0.125rem 0 0.125rem 1.25rem;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .headerCss {
+    padding: 1rem;
+  }
+
+  .navItemsCss {
+    margin-left: 2%;
+  }
+
+  .dpimgCss {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .dpnameCss {
+    font-size: 1rem;
+  }
+
+  .workAtag, .abtmeAtag {
+    font-size: 1rem;
+  }
+
+  .abtmeAtag {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .imgdivCss {
+    margin: 0.5rem;
+  }
+
+  .oximgCss {
+    height: 15rem;
+    width: 15rem;
+    margin-right: 1.5rem;
+  }
+
+  .secDesCss {
+    width: 100%;
+    margin-right: 1.5rem;
+  }
+
+  .nameHead {
+    font-size: 1.5rem;
+  }
+
+  .descCss, .cntinfo {
+    font-size: 1rem;
+  }
+
+  .cfhddiv {
+    width: 80%;
+    font-size: 1.5rem;
+    margin-left: 10%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .certifiHd {
+    font-size: 1.125rem;
+  }
+
+  .listCss {
+    padding: 1.5rem 1rem;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: 2rem;
+  }
+
+  .list-item {
+    margin-left: 2rem;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .hover-photo, .hover-photo1 {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  footer {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navItemsCss {
+    margin-left: 0;
+  }
+
+  .dpimgCss {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .dpnameCss {
+    font-size: 0.875rem;
+  }
+
+  .workAtag, .abtmeAtag {
+    font-size: 0.875rem;
+  }
+
+  .abtmeAtag {
+    font-size: 1.25rem;
+  }
+
+  .oximgCss {
+    height: 10rem;
+    width: 10rem;
+    margin-right: 1rem;
+  }
+
+  .secDesCss {
+    width: 100%;
+    margin-right: 1rem;
+  }
+
+  .nameHead {
+    font-size: 1.25rem;
+  }
+
+  .descCss, .cntinfo {
+    font-size: 0.875rem;
+  }
+
+  .cfhddiv {
+    width: 90%;
+    font-size: 1.25rem;
+    margin-left: 5%;
+  }
+
+  .certifiHd {
+    font-size: 1rem;
+  }
+
+  .listCss {
+    padding: 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-top: 1.5rem;
+    
+  }
+
+  .list-item {
+    margin-left: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  .hover-photo, .hover-photo1 {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  footer {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+  }
+}

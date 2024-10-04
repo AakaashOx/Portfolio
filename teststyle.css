@@ -1,0 +1,444 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset some default styles */
+@font-face {
+  font-family: 'FugazOne';
+  src: url('fonts/FugazOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*testing digi font*/
+@font-face {
+  font-family: 'Digibats';
+  src: url('fonts/DigibatsItalic.otf') format('opentype');
+}
+
+body, ul, li, a{
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Sanchez', serif;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to right,#131313,#212122,#131313);
+}
+
+.headerCss {
+  padding: 20px;
+  border: none;
+  background: transparent;
+  position: absolute; /* Fix the header at the top */
+  top: 0; /* Stick to the top */
+  left: 0;
+  width: 100%; /* Make the header span the full width */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  margin-right: 5px;
+}
+
+.proDivCss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItemsCss {
+  margin-left: 32.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpimgCss {
+  margin-top: 2px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dpnameCss {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+.slashCss {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.workAtag, .abtmeAtag {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+.workAtag {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.abtmeAtag {
+  font-size: 20px;
+}
+
+
+:root {
+  --scroll: 0; /* Starting scroll value */
+}
+
+.pro3cover {
+  position: relative; /* or absolute based on your layout */
+  height: 150vh; /* Adjust height as needed */
+  overflow: hidden; /* Prevents overflow of images */
+  background: linear-gradient(to right,#131313,#212122,#131313);
+  cursor: none;
+}
+
+.pro3head{
+  position: absolute;
+  color: #ffffff;
+  top:13%;
+  line-height: 0.9;
+  width: 45%;
+  left: 6%;
+  font-size: 6rem;
+  z-index: 3;
+}
+
+
+.titleimgEgov {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  top: 7%;
+  left: 2%;
+  z-index: 1;
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s ease;
+  clip-path: circle(0% at 50% 50%); /* Initially no visible circle */
+}
+
+
+.circle-cursor {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(120, 117, 117, 0.2); /* Light semi-transparent circle */
+  border-radius: 50%;
+  pointer-events: none; /* Allows interaction through the cursor */
+  mix-blend-mode: difference; /* Makes it visible on dark backgrounds */
+  z-index: 3; /* On top of everything */
+}
+
+
+.image-container {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Adjust based on your layout */
+  height: 100%; /* Adjust based on your layout */
+}
+
+.image-container img{
+  position: absolute;
+  width: 25%; /* Adjust based on your layout */
+  height: 35%; 
+  border-radius: 100%;
+  object-fit: cover;
+  border: 1px solid rgb(69, 70, 73);
+  box-shadow: 1px 20px 50px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+.imgstyle {
+  object-position: 46% 0%;
+  /* Move the image from right-bottom to left-middle using scroll */
+  transform: translate(
+    calc(max(0, (52 - min(var(--scroll), 47))) * 1vw),  /* Stops moving left after scroll value reaches 45 */
+    calc((20 + min(var(--scroll), 45)) * 1.4vh) /* Moves vertically to 60vh at scroll value 45 */
+  );
+  transition: transform 0.3s ease; /* Smooth transition */
+  z-index: 3;
+}
+
+.imgstyle2 {  
+  /* Move the image from right-bottom to left-middle using scroll */
+  transform: translate(
+    calc(max(0, (120 - min(var(--scroll), 47))) * 0.5vw), /* Horizontal position */
+    calc((20 + min(var(--scroll), 45)) * 1.4vh)  /* Vertical position */
+  ) 
+  rotate(calc(0deg - min(max(var(--scroll), 0), 45) * (0deg / 45))); /* Rotate from 1 degree to 0 degrees */
+  
+  transition: transform 0.3s ease; /* Smooth transition */
+  z-index: 2;
+}
+
+.imgstyle3 {
+
+  /* Move the image from right-bottom to left-middle using scroll */
+  transform: translate(
+    calc(max(0, (6800 - min(var(--scroll), 45))) * 0.01vw), /* Stops moving left after scroll value reaches 45 */
+    calc((20 + min(var(--scroll), 45)) * 1.4vh)  /* Moves vertically to 60vh at scroll value 45 */
+  )
+  rotate(calc(0deg - min(max(var(--scroll), 0), 45) * (0deg / 45)));;
+  transition: transform 0.3s ease; /* Smooth transition */
+  z-index: 1;
+}
+
+
+.breaksec1{
+  margin: 5rem 0rem 5rem 5.5rem;
+  border: 2px solid rgb(69, 70, 73);
+  width: 87%;
+  padding: 1rem 0rem 2rem 0rem;
+  border-radius: 1rem;
+}
+
+.breaksec2{
+  margin: 5rem 0rem 5rem 5.5rem;
+  border: 2px solid rgb(69, 70, 73);
+  width: 87%;
+  padding: 1rem 0rem 2rem 0rem;
+  border-radius: 1rem;
+}
+
+
+.breaksec3{
+  margin: 5rem 0rem 5rem 5.5rem;
+  border: 2px solid rgb(69, 70, 73);
+  width: 87%;
+  padding: 1rem 0rem 2rem 0rem;
+  border-radius: 1rem;
+}
+
+
+.descriptionHead{
+  color: #fff; 
+  text-align: left;
+  font-size: 4rem;
+  margin: 2rem 5rem 2rem 5.5rem;
+}
+
+.description{
+  width: 87%;
+  margin: 2rem 5rem 2rem 5.5rem;
+  color: #fff;
+  text-align: none;
+  font-size: 1.3rem;
+}
+
+
+/*no.1 slider*/
+
+.apple-carousel-container {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden; /* Hides overflow content */
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  position: relative;
+  border: none;
+  margin-bottom: 5rem;
+}
+
+.apple-carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  position: relative; /* Make it relative for absolute positioning */
+}
+
+.firstslImag{
+  margin-left: 15%;
+}
+
+.apple-carousel-slide img {
+  width: 70%;
+  height: 80vh;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.apple-carousel-slide img:not(:nth-child(2)) {
+  opacity: 0.5; /* Dim other images */
+}
+
+.apple-carousel-slide img:nth-child(2) {
+  transform: scale(1.1); /* Slight zoom for active slide */
+}
+
+button {
+  position: absolute; /* Position buttons */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Background for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round edges */
+  padding: 10px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.prev {
+  left: 20px; /* Position left button */
+}
+
+.next {
+  right: 20px; /* Position right button */
+}
+
+
+
+
+/*no.2 slider*/
+
+.apple-carousel-container2 {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden; /* Hides overflow content */
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  position: relative;
+  border: none;
+}
+
+.apple-carousel-slide2 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  position: relative; /* Make it relative for absolute positioning */
+}
+
+.firstslImag2{
+  margin-left: 15%;
+}
+
+.apple-carousel-slide2 img {
+  width: 70%;
+  height: 80vh;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.apple-carousel-slide2 img:not(:nth-child(2)) {
+  opacity: 0.5; /* Dim other images */
+}
+
+.apple-carousel-slide2 img:nth-child(2) {
+  transform: scale(1.1); /* Slight zoom for active slide */
+}
+
+button {
+  position: absolute; /* Position buttons */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Background for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round edges */
+  padding: 10px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.prev2 {
+  left: 20px; /* Position left button */
+}
+
+.next2 {
+  right: 20px; /* Position right button */
+}
+
+
+/*no.3 slideer*/
+
+.apple-carousel-container3 {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden; /* Hides overflow content */
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  position: relative;
+  border: none;
+}
+
+.apple-carousel-slide3 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  position: relative; /* Make it relative for absolute positioning */
+}
+
+.firstslImag3{
+  margin-left: 15%;
+}
+
+.apple-carousel-slide3 img {
+  width: 70%;
+  height: 80vh;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.apple-carousel-slide3 img:not(:nth-child(2)) {
+  opacity: 0.5; /* Dim other images */
+}
+
+.apple-carousel-slide3 img:nth-child(2) {
+  transform: scale(1.1); /* Slight zoom for active slide */
+}
+
+button {
+  position: absolute; /* Position buttons */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Background for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round edges */
+  padding: 10px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.prev3 {
+  left: 20px; /* Position left button */
+}
+
+.next3 {
+  right: 20px; /* Position right button */
+}
+
+
+
+footer {
+  text-align: left;
+  padding: 0.125rem 0 0.125rem 1.25rem;
+  background: #000000;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
