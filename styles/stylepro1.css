@@ -608,4 +608,22 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .titlepro1, .introMsg {
+    width: 100%;
+    text-align: center;
+    position: static; /* In case they're absolutely positioned */
+    margin: 10px 0;
+  }
+
+  .titlepro1 h1,
+  .titlepro1 h3 {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .introMsg p {
+    padding: 0 15px; /* Optional: prevent text from touching edges */
+  }
+}
 
